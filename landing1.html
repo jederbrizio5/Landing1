@@ -17,10 +17,10 @@
       t.src=v;s=b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t,s)
     }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1462345621814719');
+    fbq('init', '1715561412327234');
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1462345621814719&ev=PageView&noscript=1"/></noscript>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1715561412327234&ev=PageView&noscript=1"/></noscript>
 
   <style>
     body {
@@ -90,7 +90,7 @@
 </head>
 <body>
   <div class="box">
-    <img class="circle-img" src="https://i.postimg.cc/dV5pq8K2/czlogo.jpg" alt="Logo" />
+    <img class="circle-img" src="https://i.postimg.cc/595b0G5j/images.jpg" alt="Logo" />
     <h1>Chateá con nosotros</h1>
     <div class="tagline">Plataforma verificada</div>
     <p>Hacé clic para iniciar la conversación en WhatsApp.</p>
@@ -100,12 +100,12 @@
 
   <script>
     const btn = document.getElementById('whatsappBtn');
-    const waLink = 'https://wa.link/landingtwo'; // <-- Cambiá este si hace falta
+    const waLink = 'https://wa.link/iig9q6'; // <-- Cambiá este si hace falta
 
     btn.addEventListener('click', () => {
-      if (!localStorage.getItem('leadNCfired')) {
-        fbq('track', 'LeadNC');
-        localStorage.setItem('leadNCfired', '1');
+      if (!localStorage.getItem('Contactfired')) {
+        fbq('track', 'Contact');
+        localStorage.setItem('Contactfired', '1');
       }
       window.open(waLink, '_blank');
     });
