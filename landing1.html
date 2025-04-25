@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chatear por WhatsApp</title>
+  <meta name="description" content="Iniciá una conversación directa con nuestro equipo.">
+  <link rel="icon" href="https://web.whatsapp.com/img/favicon/1x/favicon.png" />
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1462345621814719');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1462345621814719&ev=PageView&noscript=1"/></noscript>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e5ddd5, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .box {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 40px;
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .circle-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      pointer-events: none;
+    }
+
+    h1 {
+      font-size: 26px;
+      color: #075e54;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      font-style: italic;
+      color: #4caf50;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: #25D366;
+      color: white;
+      padding: 18px 40px;
+      border-radius: 50px;
+      font-size: 20px;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #1ebe57;
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 12px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img class="circle-img" src="https://i.postimg.cc/dV5pq8K2/czlogo.jpg" alt="Logo" />
+    <h1>Chateá con nosotros</h1>
+    <div class="tagline">Plataforma verificada</div>
+    <p>Hacé clic para iniciar la conversación en WhatsApp.</p>
+    <button class="btn" id="whatsappBtn">Chatear</button>
+    <div class="footer">WhatsApp Inc. no almacena tu historial con terceros.</div>
+  </div>
+
+  <script>
+    const btn = document.getElementById('whatsappBtn');
+    const waLink = 'https://wa.link/landingtwo'; // <-- Cambiá este si hace falta
+
+    btn.addEventListener('click', () => {
+      if (!localStorage.getItem('leadNCfired')) {
+        fbq('track', 'LeadNC');
+        localStorage.setItem('leadNCfired', '1');
+      }
+      window.open(waLink, '_blank');
+    });
+  </script>
+</body>
+</html>
